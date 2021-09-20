@@ -1,5 +1,8 @@
 import React from 'react';
-import { Button, Card, Chip, Collapse, makeStyles, Paper, Theme, Typography } from '@material-ui/core';
+import PhoneIcon from '@material-ui/icons/Phone';
+import StarIcon from '@material-ui/icons/Star';
+import EmailIcon from '@material-ui/icons/Email';
+import { Button, Card, CardContent, Chip, Collapse, makeStyles, Paper, Theme, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
   card: {
     display: 'flex',
@@ -35,6 +38,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   details: {
     margin: theme.spacing(1)
   },
+  iconTextContainer: {
+    display: 'flex',
+    alignItems: 'center'
+  }
 }))
 
 const gridAreaName = (name: string) => `${name}-start / ${name}-end`
@@ -45,8 +52,6 @@ export const useGridStyles = makeStyles((theme: Theme) => ({
     padding: theme.spacing(0.5),
     columnGap: theme.spacing(0.5),
     rowGap: theme.spacing(0.5),
-
-    // 'grid-template-columns': '[row-start name-start] 1.5fr [name-end rating-start] 1fr [rating-end district-start] 1fr [district-end phone-start] 1fr [phone-end email-start] 1fr [email-end details-start] 1fr [details-end row-end]'
   },
   name: {
     // margin: '40px'
@@ -126,99 +131,102 @@ export const HotelRow: React.FC<HotelRowProps> = (props) => {
   const classes = useStyles();
   const gridClasses = useGridStyles();
   return (
-    <Card className={classes.card}>
-      <div className={gridClasses.row}>
-        <div className={gridClasses.name}>
-          <div>
-            <Typography color='primary' className={classes.colLabel} variant='caption'>Name</Typography>
+    <Card elevation={3} color='primary' className={classes.card}>
+      <CardContent>
+        <div className={gridClasses.row}>
+          <div className={gridClasses.name}>
+            <div>
+              <Typography color='primary' className={classes.colLabel} variant='caption'>Name</Typography>
+            </div>
+            <div>
+              <Button className={classes.button} size='small' href={reservationSite} target='_blank'>
+                <Typography variant='body1'>{name}</Typography>
+              </Button>
+            </div>
           </div>
-          <div>
-            <Button variant='outlined' size='small'  href={reservationSite} target='_blank'>
-            <Typography variant='caption'>{name}</Typography>
-            </Button>
+          <div className={gridClasses.rating}>
+            {/* <div>
+              <Typography color='primary' className={classes.colLabel} variant='caption'>Rating</Typography>
+            </div> */}
+            <div className={classes.iconTextContainer}>
+              <StarIcon fontSize='small' color='primary'/>
+              <Typography variant='body2'>5/5</Typography>
+            </div>
           </div>
-        </div>
-        <div className={gridClasses.rating}>
-          <div>
-            <Typography color='primary' className={classes.colLabel} variant='caption'>Rating</Typography>
+
+          <div className={gridClasses.phone}>
+            <div className={classes.iconTextContainer}>
+            <PhoneIcon  color='primary' fontSize='small'/>
+
+              <Typography variant='body2'>{phone}</Typography>
+            </div>
           </div>
-          <div>
-            <Typography variant='caption'>5/5</Typography>
+          <div className={gridClasses.email}>
+            {/* <div>
+              <Typography color='primary' className={classes.colLabel} variant='caption'>Email</Typography>
+            </div> */}
+            <div className={classes.iconTextContainer}>
+              <EmailIcon fontSize='small' color='primary'/>
+              <Typography variant='body2'>{email}</Typography>
+            </div>
           </div>
-        </div>
-        
-        <div className={gridClasses.phone}>
-          <div>
-            <Typography color='primary' className={classes.colLabel} variant='caption'>Phone</Typography>
+
+          <div className={gridClasses.fbReviews}>
+            <div>
+              <Typography color='primary' className={classes.colLabel} variant='caption'>Facebook</Typography>
+            </div>
+            <div>
+              <Button size='small' className={classes.button} variant='outlined' target='_blank' href='https://www.facebook.com/groups/2788738214495345/search/?q=four%20points'>
+                <Typography variant='caption'>Reviews</Typography>
+              </Button>
+            </div>
           </div>
-          <div>
-            <Typography variant='caption'>{phone}</Typography>
+          <div className={gridClasses.taReviews}>
+            <div>
+              <Typography color='primary' className={classes.colLabel} variant='caption'>Trip Advisor</Typography>
+            </div>
+            <div>
+              <Button size='small' className={classes.button} variant='outlined'>
+                <Typography className={gridClasses.buttonText} variant='caption'>Reviews</Typography></Button>
+            </div>
           </div>
-        </div>
-        <div className={gridClasses.email}>
-          <div>
-            <Typography color='primary' className={classes.colLabel} variant='caption'>Email</Typography>
+          <div className={gridClasses.details}>
+            <div>
+              <Typography className={classes.colLabel} color='primary' variant='caption'>Details</Typography>
+            </div>
+            <div>
+              <Button size='small' onClick={handleClick} className={classes.button} variant='outlined'>
+                <Typography variant='caption'>Details</Typography></Button>
+            </div>
           </div>
-          <div>
-            <Typography variant='caption'>{email}</Typography>
-          </div>
-        </div>
-        
-        <div className={gridClasses.fbReviews}>
-          <div>
-            <Typography color='primary' className={classes.colLabel} variant='caption'>Facebook</Typography>
-          </div>
-          <div>
-            <Button size='small' className={classes.button} variant='outlined' target='_blank' href='https://www.facebook.com/groups/2788738214495345/search/?q=four%20points'>
-              <Typography variant='caption'>Reviews</Typography>
-            </Button>
-          </div>
-        </div>
-        <div className={gridClasses.taReviews}>
-          <div>
-            <Typography color='primary' className={classes.colLabel} variant='caption'>Trip Advisor</Typography>
-          </div>
-          <div>
-            <Button size='small' className={classes.button} variant='outlined'>
-              <Typography className={gridClasses.buttonText} variant='caption'>Reviews</Typography></Button>
-          </div>
-        </div>
-        <div className={gridClasses.details}>
-          <div>
-            <Typography className={classes.colLabel} color='primary' variant='caption'>Details</Typography>
-          </div>
-          <div>
-            <Button size='small' onClick={handleClick} className={classes.button} variant='outlined'>
-              <Typography variant='caption'>Details</Typography></Button>
-          </div>
-        </div>
 
 
 
-      </div>
-      <div className={classes.locationDetails}>
-        <div>
+        </div>
+        <div className={classes.locationDetails}>
           <div>
-            <Typography color='primary' className={classes.colLabel} variant='caption'>District</Typography>
+            <div>
+              <Typography color='primary' className={classes.colLabel} variant='caption'>District</Typography>
+            </div>
+            <div>
+              <Chip size='small' label={location} />
+            </div>
           </div>
-          <div>
-            <Chip size='small'  label={location}/>
+          <div className={classes.address}>
+            <div >
+              <Typography color='primary' variant='caption'>Address</Typography>
+            </div>
+            <div>
+              <Typography variant='caption'>{address}</Typography>
+            </div>
           </div>
         </div>
-        <div className={classes.address}>
-          <div >
-            <Typography color='primary' variant='caption'>Address</Typography>
-          </div>
-          <div>
-            <Typography variant='caption'>{address}</Typography>
-          </div>
+        <Collapse in={isOpen}>
+          <div className={classes.details}>
+            prices
         </div>
-      </div>
-      <Collapse in={isOpen}>
-        <div className={classes.details}>
-          prices
-        </div>
-      </Collapse>
+        </Collapse>
+      </CardContent>
     </Card>
   )
 }
