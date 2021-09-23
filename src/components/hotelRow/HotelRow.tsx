@@ -2,7 +2,7 @@ import React from 'react';
 import PhoneIcon from '@material-ui/icons/Phone';
 import StarIcon from '@material-ui/icons/Star';
 import EmailIcon from '@material-ui/icons/Email';
-import { Button, Card, CardContent, Chip, Collapse, makeStyles, Paper, Theme, Typography } from '@material-ui/core';
+import { Button, Card, CardContent, Chip, Collapse, makeStyles, Theme, Typography } from '@material-ui/core';
 const useStyles = makeStyles((theme: Theme) => ({
   card: {
     display: 'flex',
@@ -149,25 +149,22 @@ export const HotelRow: React.FC<HotelRowProps> = (props) => {
               <Typography color='primary' className={classes.colLabel} variant='caption'>Rating</Typography>
             </div> */}
             <div className={classes.iconTextContainer}>
-              <StarIcon fontSize='small' color='primary'/>
-              <Typography variant='body2'>5/5</Typography>
+              <StarIcon fontSize='small' color='primary' />
+              <Typography variant='body1'>5/5</Typography>
             </div>
           </div>
 
           <div className={gridClasses.phone}>
             <div className={classes.iconTextContainer}>
-            <PhoneIcon  color='primary' fontSize='small'/>
+              <PhoneIcon color='primary' fontSize='small' />
 
-              <Typography variant='body2'>{phone}</Typography>
+              <Typography variant='body1'>{phone}</Typography>
             </div>
           </div>
           <div className={gridClasses.email}>
-            {/* <div>
-              <Typography color='primary' className={classes.colLabel} variant='caption'>Email</Typography>
-            </div> */}
             <div className={classes.iconTextContainer}>
-              <EmailIcon fontSize='small' color='primary'/>
-              <Typography variant='body2'>{email}</Typography>
+              <EmailIcon fontSize='small' color='primary' />
+              <Typography variant='body1'>{email}</Typography>
             </div>
           </div>
 

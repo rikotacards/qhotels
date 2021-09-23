@@ -3,6 +3,7 @@ import React from 'react';
 import { Notice } from './components/notice/Notice';
 import { HotelsPage } from './pages/HotelsPages';
 
+
 const useStyles = makeStyles((theme: Theme) => ({
   offset: theme.mixins.toolbar
 }))

@@ -1,37 +1,10 @@
 import { HotelRowProps } from "../components/hotelRow/HotelRow"
 
-export const colMapping = {
-  "name": "Name",
-  "location": "Location",
-  "address": "Address",
-  "reservationSite": "reservationSite",
-  "email": "Email",
-  "phone": 'Phone',
-  'facebookReviews': 'Facebook Reviews',
-  'TripAdvisorReviews': 'Trip Advisor Reviews'
-}
+
 
 export const hotelsData: HotelRowProps[] = [
   {
-    "name": "Name of Hotel",
-    "location": "District",
-    "address": "Address",
-    "reservationSite": "Website Reservatio",
-    "email": "Email Address",
-    "phone": "Tel. No.",
-    "col8": "Fax No.",
-    "col9": "No. of Rooms",
-    "col10": "Proposed Room Rate per Night for\nrd price\nand all inclusive)(HK$)\nQuarantine Guests",
-    "col11": "No. Rooms",
-    "col12": "Proposed Room Rate per Night for Quarantine Guests (full board price and\nall inclusive)(HK$)",
-    "col13": "Whether the hotel\nwill provide\ndelivery service\n(e.g. take-away\nfood order) to\nguest rooms",
-    "col14": "Wheelchair\nAccessible (Y/N)\n(Please check with\nhotel for details)",
-    "col15": "Policy for Guests Aged Under 18:\n(a) Under 12 years old;\n(b) Between 12 and under 16 years old; and\n(c) Between 16 and 18 years old"
-  },
-  {
-
-
-      "name": "Best Western Plus Hotel Hong Kong",
+    "name": "Best Western Plus Hotel Hong Kong",
     "location": "Central and Western",
     "address": "308 Des Voeux Road West",
     "reservationSite": "http://www.bestwesternplushot\nelhongkong.com",
@@ -47,9 +20,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Hotel welcomes the quarantine guests under the age of 18 to\nstay and we will provide special care for the guests. In addition,\nthe contact phone number for the guest's guardian will be\nrequired"
   },
   {
-
-
-      "name": "CM+ Hotels & Serviced Apartments",
+    "name": "CM+ Hotels & Serviced Apartments",
     "location": "Central and Western",
     "address": "No. 16 Connaught Road West, Hong Kong",
     "reservationSite": "https://cmplus.com.hk/zh/quara\nntine-package/",
@@ -65,9 +36,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Must stay with an adult"
   },
   {
-
-
-      "name": "Courtyard by Marriott Hong Kong",
+    "name": "Courtyard by Marriott Hong Kong",
     "location": "Central and Western",
     "address": "167 Connaught Road West, Hong Kong",
     "reservationSite": "www.courtyardhongkong.com",
@@ -83,9 +52,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) Consent & Indemnity form to be filled by Parents/Guardian."
   },
   {
-
-
-      "name": "Grand City Hotel",
+    "name": "Grand City Hotel",
     "location": "Central and Western",
     "address": "338 Queen's Road West",
     "reservationSite": "http://www.grandcityhotelhong\nkong.com",
@@ -101,9 +68,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Hotel welcomes the quarantine guests under the age of 18 to\nstay and we will provide special care for the guests. In addition,\nthe contact phone number for the guest's guardian will be\nrequired"
   },
   {
-
-
-      "name": "JEN Hong Kong by Shangri-La",
+    "name": "JEN Hong Kong by Shangri-La",
     "location": "Central and Western",
     "address": "508 Queen's Road West, Hong Kong SAR",
     "reservationSite": "https://www.shangri-\nla.com/en/hotels/jen/hongkong/\nwesterndistrict",
@@ -119,9 +84,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) The hotel suggests that guests aged 18 years or under be\naccompanied by a parent or legal guardian. If the guest decides\nto stay alone, the guest needs to present a letter signed by a\nparent/legal guardian to confirm this arrangement before\nchecking-in at the hotel."
   },
   {
-
-
-      "name": "Lan Kwai Fong Hotel @ Kau U Fong",
+    "name": "Lan Kwai Fong Hotel @ Kau U Fong",
     "location": "Central and Western",
     "address": "No.3 Kau U Fong, Central, Hong Kong",
     "reservationSite": "https://www.dcollection.com/en\n/lan-kwai-fong-hotel-kau-u-\nfong/",
@@ -137,9 +100,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "A parent / legal guardian physically shows up to complete the\nregistration and check-out with the child.\nThe parent / legal guardian is required to sign a Declaration\nForm"
   },
   {
-
-
-      "name": "One-Eight-One Hotel & Serviced\nResidences",
+    "name": "One-Eight-One Hotel & Serviced\nResidences",
     "location": "Central and Western",
     "address": "181 Connaught Road West, Hong Kong",
     "reservationSite": "www.one-eight-one.com",
@@ -155,26 +116,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) Must stay with an adult"
   },
   {
-
-  
-    "name": "Name of Hotel",
-    "location": "District",
-    "address": "Address",
-    "reservationSite": "Website for Reservation",
-    "email": "Email Address",
-    "phone": "Tel. No.",
-    "col8": "Fax No.",
-    "col9": "No. of Rooms",
-    "col10": "Proposed Room Rate per Night for\nQuarantine Guests (full board price\nand all inclusive)(HK$)",
-    "col11": "No. of Rooms",
-    "col12": "Proposed Room Rate per Night for Quarantine Guests (full board price and\nall inclusive)(HK$)",
-    "col13": "Whether the hotel\nwill provide\ndelivery service\n(e.g. take-away\nfood order) to\nguest rooms",
-    "col14": "Wheelchair\nAccessible (Y/N)\n(Please check with\nhotel for details)",
-    "col15": "Policy for Guests Aged Under 18:\n(a) Under 12 years old;\n(b) Between 12 and under 16 years old; and\n(c) Between 16 and 18 years old"
-  },
-  {
-
-      "name": "Ovolo Central",
+    "name": "Ovolo Central",
     "location": "Central and Western",
     "address": "2 Arbuthnot Road, Central, Hong Kong",
     "reservationSite": "https://ovolohotels.com/ovolo/o\nffers/meet-your-quarantine-\nconcierge/",
@@ -206,8 +148,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Our hotel welcomes the quarantine guests under the age of 18 to\nstay and we will provide special care for the guests. In addition,\nthe contact phone number for the guest's guardian will be\nrequired."
   },
   {
-
-  
     "name": "The Landmark Mandarin Oriental Hong\nKong",
     "location": "Central and Western",
     "address": "The Landmark, 15 Queen's Road Central, Hong Kong",
@@ -224,8 +164,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Consent & Indemnity form to be filled by Parents/Guardian. If\nthe minor is to be accompanied by an adult during his/her stay,\nthe caretaker is required to apply for conditional approval from\nthe Department of Health by email to\ncaretaker_apply@dh.gov.hk, before the arrival of the guests."
   },
   {
-
-  
     "name": "Ramada Hong Kong Grand View",
     "location": "Eastern",
     "address": "No.88 Chun Yeung Street,\nNorth Point, Hong Kong Hong Kong",
@@ -243,7 +181,6 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
 
-  
     "name": "Four Points by Sheraton Hong Kong,\nTung Chung",
     "location": "Islands",
     "address": "9 Yi Tung Road, Tung Chung, Lantau Island, Hong Kong",
@@ -260,8 +197,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Needs to present a document signed by a parent/ legal\nguardian to confirm such arrangement upon check-in\n(c) Needs to present a document signed by a parent/ legal\nguardian to confirm such arrangement upon check-in"
   },
   {
-
-  
     "name": "Regal Airport Hotel",
     "location": "Islands",
     "address": "9 Cheong Tat Road, Hong Kong International Airport,\nChek Lap Kok, Hong Kong",
@@ -278,28 +213,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) A letter signed by his/her parent or guardian to confirm the\narrangement is required prior check-in"
   },
   {
-   
-
-  
-    "name": "Name of Hotel",
-    "location": "District",
-    "address": "Address",
-    "reservationSite": "Website for Reservation",
-    "email": "Email Address",
-    "phone": "Tel. No.",
-    "col8": "Fax No.",
-    "col9": "No. of Rooms",
-    "col10": "Proposed Room Rate per Night for\nQuarantine Guests (full board price\nand all inclusive)(HK$)",
-    "col11": "No. of Rooms",
-    "col12": "Proposed Room Rate per Night for Quarantine Guests (full board price and\nall inclusive)(HK$)",
-    "col13": "Whether the hotel\nwill provide\ndelivery service\n(e.g. take-away\nfood order) to\nguest rooms",
-    "col14": "Wheelchair\nAccessible (Y/N)\n(Please check with\nhotel for details)",
-    "col15": "Policy for Guests Aged Under 18:\n(a) Under 12 years old;\n(b) Between 12 and under 16 years old; and\n(c) Between 16 and 18 years old"
-  },
-  {
-   
-
-  
     "name": "Bridal Tea House Hotel Hung Hom\nGillies Avenue South",
     "location": "Kowloon City",
     "address": "No. 69 Gillies Avenue South, Hung Hom",
@@ -316,9 +229,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Hotel does not accept children under 18 years old"
   },
   {
-   
-
-  
     "name": "iclub Ma Tau Wai Hotel",
     "location": "Kowloon City",
     "address": "8 Ha Heung Road, Ma Tau Wai, Hong Kong",
@@ -335,9 +245,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) A letter signed by his/her parent or guardian to confirm the\narrangement is required prior check-in"
   },
   {
-   
-
-  
     "name": "Kerry Hotel, Hong Kong",
     "location": "Kowloon City",
     "address": "38 Hung Luen Road, Hung Hom Bay, Kowloon Hong\nKong SAR",
@@ -354,9 +261,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) The hotel suggests that guests aged 18 years or under be\naccompanied by a parent or legal guardian. If the guest decides\nto stay alone, the guest needs to present a letter signed by a\nparent/legal guardian to confirm this arrangement before\nchecking-in at the hotel."
   },
   {
-   
-
-  
     "name": "Metropark Hotel Kowloon",
     "location": "Kowloon City",
     "address": "75 Waterloo Road, Kowloon, Hong Kong",
@@ -373,9 +277,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Guest under the age of 15 must be accompanied by an adult."
   },
   {
-   
-
-  
     "name": "Regal Oriental Hotel",
     "location": "Kowloon City",
     "address": "30 - 38 Sa Po Road, Kowloon City, Hong Kong",
@@ -391,29 +292,8 @@ export const hotelsData: HotelRowProps[] = [
     "col14": "Y",
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) A letter signed by his/her parent or guardian to confirm the\narrangement is required prior check-in"
   },
-  {
-   
 
-  
-    "name": "Name of Hotel",
-    "location": "District",
-    "address": "Address",
-    "reservationSite": "Website for Reservation",
-    "email": "Email Address",
-    "phone": "Tel. No.",
-    "col8": "Fax No.",
-    "col9": "No. of Rooms",
-    "col10": "Proposed Room Rate per Night for\nQuarantine Guests (full board price\nand all inclusive)(HK$)",
-    "col11": "No. of Rooms",
-    "col12": "Proposed Room Rate per Night for Quarantine Guests (full board price and\nall inclusive)(HK$)",
-    "col13": "Whether the hotel\nwill provide\ndelivery service\n(e.g. take-away\nfood order) to\nguest rooms",
-    "col14": "Wheelchair\nAccessible (Y/N)\n(Please check with\nhotel for details)",
-    "col15": "Policy for Guests Aged Under 18:\n(a) Under 12 years old;\n(b) Between 12 and under 16 years old; and\n(c) Between 16 and 18 years old"
-  },
   {
-   
-
-  
     "name": "Dorsett Tsuen Wan, Hong Kong",
     "location": "Kwai Tsing District",
     "address": "28 Kin Chuen Street, Kwai Chung, Hong Kong",
@@ -430,9 +310,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "A parent / legal guardian physically shows up to complete the\nregistration and check-out with the child.\nThe parent / legal guardian is required to sign a Declaration\nForm"
   },
   {
-   
-
-  
     "name": "Nina Hotel Island South (Formerly\nL'hotel Island South)",
     "location": "Southern District",
     "address": "55 Wong Chuk Hang Road, Aberdeen, Hong Kong",
@@ -449,9 +326,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Pre-registration by parents or guardians would be needed for\nguests under the age of 18"
   },
   {
-   
-
-  
     "name": "Ovolo Southside",
     "location": "Southern District",
     "address": "64 Wong Chuk Hang Road, Wong Chuk Hang",
@@ -468,9 +342,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "We welcome guests between 14 to 17 years old to stay in the\nhotel alone for quarantine themselves, a parent/legal guardian\nrequire to complete a consent letter for underage prior check in.\nIf the guest is 14 years old or younger, the guest must be\naccompanied by a parent/legal guardian, and follow the same\nquarantine rules during the stay in hotel.\nSpecific room type will be arrange for underage."
   },
   {
-   
-
-  
     "name": "Silka Far East Hotel Hong Kong",
     "location": "Tsuen Wan",
     "address": "135 - 143 Castle Peak Road,\nTsuen Wan, New Terrorites",
@@ -487,9 +358,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) A parent/legal guardian should physically show up to\ncomplete the registration and check-out with the child. The\nparent/legal guardian is required to sign a Declaration Form\n(c) The parent/legal guardian is required to sign a declaration\nform to hotel before check-in"
   },
   {
-   
-
-  
     "name": "Best Western Hotel Causeway Bay",
     "location": "Wanchai",
     "address": "38 Bowrington Road, Causeway Bay",
@@ -505,48 +373,8 @@ export const hotelsData: HotelRowProps[] = [
     "col14": "Y",
     "col15": "(a) & (b) & (c) Hotel welcomes the quarantine guests under the\nage of 18 to stay and we will provide special care for the guests.\nIn addition, the contact phone number for the guest's guardian\nwill be required"
   },
-  {
-   
 
-  
-    "name": "",
-    "location": "",
-    "address": "",
-    "reservationSite": "",
-    "email": "",
-    "phone": "",
-    "col8": "",
-    "col9": "",
-    "col10": "Proposed Room Rate per Night for",
-    "col11": "",
-    "col12": "Proposed Room Rate per Night for Quarantine Guests (full board price and",
-    "col13": "will provide\ndelivery service\n(e.g. take-away",
-    "col14": "Accessible (Y/N)",
-    "col15": "Policy Aged\n(a) Under 12 years old;\n(b) Between 12 and under 16 years old; and"
-  },
   {
-   
-
-  
-    "name": "Name of Hotel",
-    "location": "District",
-    "address": "Address",
-    "reservationSite": "Website for Reservation",
-    "email": "Email Address",
-    "phone": "Tel. No.",
-    "col8": "No. Fax No.",
-    "col9": "No. of Rooms",
-    "col10": "Quarantine Guests (full board price\nand all inclusive)(HK$)",
-    "col11": "No. of Rooms",
-    "col12": "all inclusive)(HK$)",
-    "col13": "(e.g. take-away\nfood order) to\nguest rooms",
-    "col14": "(Please check with\nhotel for details)",
-    "col15": "(c) Between 16 and 18 years old"
-  },
-  {
-   
-
-  
     "name": "Crowne Plaza Hong Kong Causeway Bay",
     "location": "Wanchai",
     "address": "8 Leighton Road, Causeway Bay, Hong Kong",
@@ -563,9 +391,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Guardian must register for the guest in advance.\n(b) Guardian must register for the guest in advance.\n(c) Guardian must register for the guest in advance."
   },
   {
-   
 
-  
     "name": "Dorsett Wanchai Hong Kong",
     "location": "Wanchai",
     "address": "387 - 397 Queen's Road East, Wan Chai, Hong Kong",
@@ -582,9 +408,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Age 11 years old : The parent / legal guardian is required to\nsign a Declaration Form.\nBelow 11 years old : Must Stay with an adult\n(b) Between 12 and 15 years old: The parent / legal guardian is\nrequired to sign a Declaration Form\n(c) Between 16 and 17 years old : The parent / legal guardian is\nrequired to sign a Delclaration Form"
   },
   {
-   
-
-  
     "name": "Eco Tree Hotel Causeway Bay",
     "location": "Wanchai",
     "address": "15 Mercury Street, Causeway Bay, Hong Kong",
@@ -601,9 +424,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) The guardian needs to sign a consent form"
   },
   {
-   
-
-  
     "name": "Hotel Indigo Hong Kong Island",
     "location": "Wanchai",
     "address": "No. 246 Queen's Road East, Hong Kong",
@@ -620,9 +440,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) Can stay on their own, if consent form signed by the legal\nguardian before check-in."
   },
   {
-   
 
-  
     "name": "Mira Moon Hotel",
     "location": "Wanchai",
     "address": "388 Jaffe Road, Causeway Bay, Hong Kong",
@@ -638,29 +456,9 @@ export const hotelsData: HotelRowProps[] = [
     "col14": "NO",
     "col15": "We welcome guests between 16 and 17 years old to stay in the\nhotel alone for isolation, but a legal guardian/parent must\naccompany the guest to check in and check out at the hotel, fill\nout a health declaration form and provide an emergency contact\nnumber.\nIf the guest is 15 years old or younger, the guest must be\naccompanied by a legal guardian/parent, and follow the same\nisolation rules during the stay to reduce the risk of community\ntransmission."
   },
-  {
-   
 
-  
-    "name": "Name of Hotel",
-    "location": "District",
-    "address": "Address",
-    "reservationSite": "Website for Reservation",
-    "email": "Email Address",
-    "phone": "Tel. No.",
-    "col8": "No. Fax No.",
-    "col9": "of Rooms",
-    "col10": "Proposed Room Rate per Night for\nQuarantine Guests (full board price\nand all inclusive)(HK$)",
-    "col11": "No. of Rooms",
-    "col12": "Proposed Room Rate per Night for Quarantine Guests (full board price and\nall inclusive)(HK$)",
-    "col13": "will provide\ndelivery service\n(e.g. take-away\nfood order) to (Please\nguest rooms",
-    "col14": "Wheelchair\nAccessible (Y/N)\n(Please check with\nhotel for details)",
-    "col15": "Policy for Guests Aged Under 18:\n(a) Under 12 years old;\n(b) Between 12 and under 16 years old; and\n(c) Between 16 and 18 years old"
-  },
   {
-   
 
-  
     "name": "Empire Hotel Causeway Bay",
     "location": "Wanchai",
     "address": "No. 8 Wing Hing Street, Hong Kong",
@@ -677,9 +475,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) Guest needs to present a consent letter signed by a parent/\nlegal guardian to confirm such arrangement upon check-in"
   },
   {
-   
 
-  
     "name": "Empire Prestige Causeway Bay",
     "location": "Wanchai",
     "address": "No. 8A Wing Hing Street, Hong Kong",
@@ -696,9 +492,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) Guest needs to present a consent letter signed by a parent/\nlegal guardian to confirm such arrangement upon check-in"
   },
   {
-   
 
-  
     "name": "Pentahotel Hong Kong, Kowloon",
     "location": "Wong Tai Sin",
     "address": "19 Luk Hop Street, San Po Kong, Kowloon, Hong Kong",
@@ -715,9 +509,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Has to be accompanied by an adult taking the same flight to\nHong Kong\n(b) Has to be accompanied by an adult taking the same flight to\nHong Kong\nc) Hotel will arrange accommdation for guests over the age of\n16\n#Each guestroom accommodate two person only"
   },
   {
-   
 
-  
     "name": "Bridal Tea House Hotel Yau Ma Tei\nWing Sing Lane",
     "location": "Yau Tsim Mong",
     "address": "No. 5 Wing Sing Lane, Yau Ma Tei, Kowloon",
@@ -734,9 +526,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "Hotel does not accept children under 18 years old"
   },
   {
-   
-
-  
     "name": "Dorsett Mongkok Hong Kong",
     "location": "Yau Tsim Mong",
     "address": "88 Tai Kok Tsui Road, Kowloon, Hong Kong",
@@ -753,9 +542,7 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Age 11 years old : The parent / legal guardian is required to\nsign a Declaration Form.\nBelow 11 years old : Must Stay with an adult\n(b) Between 12 and 15 years old : The parent/ legal guardian is\nrequired to sign a Declaration Form\n(c) Between 16 and 17 years old : The parent / legal guardian is\nrequired to sign a Delclaration Form"
   },
   {
-   
 
-  
     "name": "Ramada Hong Kong Grand",
     "location": "Yau Tsim Mong",
     "address": "23 Austin Avenue, Tsim Sha Tsui, Kowloon, Hong Kon",
@@ -771,29 +558,8 @@ export const hotelsData: HotelRowProps[] = [
     "col14": "Y",
     "col15": "Our hotel welcomes the quarantine guests under the age of 18 to\nstay and we will provide special care for the guests. In addition,\nthe contact phone number for the guest's guardian will be\nrequired."
   },
-  {
-  
 
-  
-    "name": "Name of Hotel",
-    "location": "District",
-    "address": "Address",
-    "reservationSite": "Website for Reservation",
-    "email": "Email Address",
-    "phone": "Tel. No.",
-    "col8": "Fax No.",
-    "col9": "No. of Rooms",
-    "col10": "Proposed Room Rate per Night for\nQuarantine Guests (full board price\nand all inclusive)(HK$)",
-    "col11": "No. of Rooms",
-    "col12": "Proposed Room Rate per Night for Quarantine Guests (full board price and\nall inclusive)(HK$)",
-    "col13": "Whether the hotel\nwill provide\ndelivery service\n(e.g. take-away\nfood order) to\nguest rooms",
-    "col14": "Wheelchair\nAccessible (Y/N)\n(Please check with\nhotel for details)",
-    "col15": "Policy for Guests Aged Under 18:\n(a) Under 12 years old;\n(b) Between 12 and under 16 years old; and\n(c) Between 16 and 18 years old"
-  },
   {
-  
-
-  
     "name": "Sheraton Hong Kong Hotel and Towers",
     "location": "Yau Tsim Mong",
     "address": "20 Nathan Road, Tsim Sha Tsui",
@@ -810,9 +576,6 @@ export const hotelsData: HotelRowProps[] = [
     "col15": "(a) Must stay with an adult\n(b) Must stay with an adult\n(c) Must stay with an adult"
   },
   {
-  
-
-  
     "name": "Silka Seaview Hotel Hong Kong",
     "location": "Yau Tsim Mong",
     "address": "268 Shanghai Street, Yau Ma Tei,\nKowloon, Hong Kong",
