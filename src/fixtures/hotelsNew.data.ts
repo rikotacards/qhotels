@@ -1450,7 +1450,7 @@ export const hotelsData: HotelRowProps[] = [
       {
         isSuite: false,
         name: 'Non-suite Queen',
-        pax: 1,
+        pax: 2,
         price: 940
       },
       {

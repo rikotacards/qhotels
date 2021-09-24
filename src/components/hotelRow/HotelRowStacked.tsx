@@ -8,11 +8,25 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import { Button, Card, CardContent, Chip, Collapse, makeStyles, Paper, Theme, Typography } from '@material-ui/core';
 import { HotelDetails } from '../hotelDetails/HotelDetails';
+import { RoomDetails } from '../roomDetails/RoomDetails';
 const useStyles = makeStyles((theme: Theme) => ({
-  card: {
+  vertical: {
     display: 'flex',
     flexDirection: 'column',
+    marginBottom: theme.spacing(1),
+  },
+  horizontal: {
+    display: 'flex',
     marginBottom: theme.spacing(1)
+  },
+  detailsLayout: {
+    display: 'flex',
+    flexDirection: 'column'
+  },
+  roomDetails: {
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: theme.spacing(1)
   },
   reviewsContainer: {
     display: 'flex',
@@ -58,7 +72,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   nameRatingContainer: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100%'
   },
   buttonText: {
     textOverflow: 'elipsis',
@@ -70,6 +85,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   infoContainer: {
     marginLeft: theme.spacing(1)
+  },
+  marginBottom: {
+    marginBottom: theme.spacing(1)
   }
 }))
 
@@ -115,69 +133,77 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
   const childrenPolicy = props.col15;
   const classes = useStyles();
   return (
-    <Card elevation={3} color='primary' className={classes.card}>
-      <CardContent>
+    <Card elevation={3} color='primary' className={classes.marginBottom}>
+      <CardContent className={classes.vertical}>
         <div className={classes.nameRatingContainer}>
           <Button className={classes.button} size='small' href={reservationSite} target='_blank'>
-            <Typography  variant='h5' gutterBottom>{name}</Typography>
+            <Typography variant='h5' gutterBottom>{name}</Typography>
           </Button>
-          <div className={classes.iconTextContainer}>
+          {/* <div className={classes.iconTextContainer}>
             <StarIcon className={classes.icon} color='primary' />
             <Typography variant='body1'>5/5</Typography>
-          </div>
+          </div> */}
         </div>
-        <div className={classes.infoContainer}>
+        <div className={classes.horizontal}>
+          <div className={classes.detailsLayout}>
 
-        <div className={classes.iconTextContainer}>
-          <MonetizationOnIcon className={classes.icon} fontSize='small' color='primary' />
-          <Typography variant='body1'>{'400-1200'}</Typography>
-        </div>
-        <div className={classes.iconTextContainer}>
-          <EmailIcon className={classes.icon} fontSize='small' color='primary' />
-          <Typography variant='body1'>{email}</Typography>
-        </div>
+            <div className={classes.infoContainer}>
 
-
-        <div className={classes.iconTextContainer}>
-          <PhoneIcon className={classes.icon} color='primary' fontSize='small' />
-          <Typography variant='body1'>{phone}</Typography>
-        </div>
-        <div className={classes.iconTextContainer}>
-          <LocationOnIcon fontSize='small' color='primary' className={classes.icon} />
-          <div>
-            <Typography variant='body1'>{address}</Typography>
-            <Typography variant='caption'>{location}</Typography>
-          </div>
-        </div>
+              <div className={classes.iconTextContainer}>
+                <MonetizationOnIcon className={classes.icon} fontSize='small' color='primary' />
+                <Typography variant='body1'>{'400-1200'}</Typography>
+              </div>
+              <div className={classes.iconTextContainer}>
+                <EmailIcon className={classes.icon} fontSize='small' color='primary' />
+                <Typography variant='body1'>{email}</Typography>
+              </div>
 
 
+              <div className={classes.iconTextContainer}>
+                <PhoneIcon className={classes.icon} color='primary' fontSize='small' />
+                <Typography variant='body1'>{phone}</Typography>
+              </div>
+              <div className={classes.iconTextContainer}>
+                <LocationOnIcon fontSize='small' color='primary' className={classes.icon} />
+                <div>
+                  <Typography variant='body1'>{address}</Typography>
+                  <Typography variant='caption'>{location}</Typography>
+                </div>
+              </div>
 
-        <div className={classes.reviewsContainer}>
-          <div className={classes.iconTextContainer}>
-            <RateReviewIcon className={classes.icon} fontSize='small' color='primary' />
-            <Button size='small' className={classes.reviewButton} variant='outlined' target='_blank' href='https://www.facebook.com/groups/2788738214495345/search/?q=four%20points'>
-              <Typography variant='caption'>Facebook Reviews</Typography>
-            </Button>
-            <Button size='small' className={classes.button} variant='outlined'>
-              <Typography className={classes.buttonText} variant='caption'>Trip Advisor Reviews</Typography></Button>
-          </div>
-        </div>
-        <div className={classes.iconTextContainer}>
-          <ExpandMoreIcon color='primary' fontSize='small' className={classes.icon} />
-          <Button
-            onClick={handleClick}
-            size='small'
-            variant='outlined'
-            className={classes.reviewButton}>
-            <Typography variant='caption'>
-              Expand for room pricing details
+
+
+              <div className={classes.reviewsContainer}>
+                <div className={classes.iconTextContainer}>
+                  <RateReviewIcon className={classes.icon} fontSize='small' color='primary' />
+                  <Button size='small' className={classes.reviewButton} variant='outlined' target='_blank' href='https://www.facebook.com/groups/2788738214495345/search/?q=four%20points'>
+                    <Typography variant='body1'>Facebook Reviews</Typography>
+                  </Button>
+                  <Button size='small' className={classes.button} variant='outlined'>
+                    <Typography className={classes.buttonText} variant='body1'>Trip Advisor Reviews</Typography></Button>
+                </div>
+              </div>
+              <div className={classes.iconTextContainer}>
+                <ExpandMoreIcon color='primary' fontSize='small' className={classes.icon} />
+                <Button
+                  onClick={handleClick}
+                  size='small'
+                  variant='outlined'
+                  className={classes.reviewButton}>
+                  <Typography variant='body1'>
+                    Expand for Children Policy
           </Typography>
-          </Button>
-        </div>
+                </Button>
+              </div>
+            </div>
 
-        <Collapse in={isOpen}>
-         <HotelDetails suiteDetails={suiteDetails || ""} nonSuiteDetails={nonSuiteDetails || ""} childrenPolicy={childrenPolicy || ""}/>
-        </Collapse>
+            <Collapse in={isOpen}>
+              <HotelDetails suiteDetails={suiteDetails || ""} nonSuiteDetails={nonSuiteDetails || ""} childrenPolicy={childrenPolicy || ""} />
+            </Collapse>
+          </div>
+          <div className={classes.roomDetails}>
+            <RoomDetails rooms={props.rooms} />
+          </div>
         </div>
       </CardContent>
     </Card>

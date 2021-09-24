@@ -30,13 +30,9 @@ export const NewLineText: React.FC<NewLineTextProps> = (props) => {
   const { text } = props;
   const classes = useStyles()
   const lines = text?.split('\n').map((line) => {
-    if (line.indexOf('HK$') > -1 || line.indexOf('$') > -1) {
-      return (
-        <Typography className={classes.priceValue} variant='body1'>{line}</Typography>
-      )
-    }
+   
     return (
-      <Typography className={classes.pricingDetails} color='primary' variant='body1'>{line}</Typography>
+      <Typography className={classes.pricingDetails}  variant='body1'>{line}</Typography>
     )
 
   })
@@ -54,34 +50,6 @@ export const HotelDetails: React.FC<HotelDetailsProps> = (props) => {
   const classes = useStyles();
   return (
     <div>
-      <Card className={classes.card} elevation={4} variant='outlined'>
-        <CardContent>
-          <Typography variant='body1'>
-            Suite
-          </Typography>
-          <Typography variant='caption'>
-            Proposed Room Rate per Night for
-            Quarantine Guests (full board price
-            and all inclusive)(HK$)
-      </Typography>
-          <Divider />
-
-          <NewLineText text={suiteDetails} />
-        </CardContent>
-      </Card>
-      <Card className={classes.card} elevation={4} variant='outlined'>
-        <CardContent>
-          <Typography variant='body1'>
-            Non-suite
-          </Typography>
-          <Typography variant='caption'>
-            Proposed Room Rate per Night for Quarantine Guests (full board price and
-            all inclusive)(HK$)
-      </Typography>
-          <Divider />
-          <NewLineText text={nonSuiteDetails} />
-        </CardContent>
-      </Card>
       <Card className={classes.card} variant='outlined'>
         <CardContent>
           <Typography>
