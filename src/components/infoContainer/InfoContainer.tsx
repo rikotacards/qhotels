@@ -99,7 +99,7 @@ const useStyles = makeStyles((theme: Theme) => ({
 }))
 
 
-export const InfoContainer: React.FC<HotelRowProps> = ({ email, phone, address, location, rooms }) => {
+export const InfoContainer: React.FC<HotelRowProps> = ({ email, phone, address, location, rooms, facebookReviews, tripAdvisorReviews }) => {
   const roomSorted = rooms.sort((a,b) => a.price - b.price)
   const minPrice = roomSorted[0].price;
   const maxPrice = roomSorted[roomSorted.length-1].price;
@@ -129,11 +129,11 @@ export const InfoContainer: React.FC<HotelRowProps> = ({ email, phone, address, 
         <div className={classes.iconTextContainer}>
           <RateReviewIcon className={classes.icon} fontSize='small' color='primary' />
           <div>
-          <Button size='small' fullWidth className={classes.reviewButton} variant='outlined' target='_blank' href='https://www.facebook.com/groups/2788738214495345/search/?q=four%20points'>
-            <Typography variant='body1'>Facebook Reviews</Typography>
+          <Button disabled={!facebookReviews} size='small' fullWidth className={classes.reviewButton} variant='outlined' target='_blank' href={facebookReviews || ""}>
+            <Typography variant='body1'>{!facebookReviews ? 'No Fb Reviews' : 'Facebook Reviews'}</Typography>
           </Button>
-          <Button size='small' fullWidth className={classes.button} variant='outlined'>
-            <Typography className={classes.buttonText} variant='body1'>Trip Advisor Reviews</Typography></Button>
+          <Button disabled={!tripAdvisorReviews} size='small' fullWidth className={classes.button} variant='outlined'target='_blank' href={tripAdvisorReviews || ""}>
+            <Typography className={classes.buttonText} variant='body1'>{!tripAdvisorReviews ? 'No TripAdvisor Reviews': 'TripAdvisor Reviews'}</Typography></Button>
             </div>
         </div>
       </div>

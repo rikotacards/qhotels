@@ -4,6 +4,7 @@ import { Button, Card, CardContent, Divider, makeStyles, Theme, Typography } fro
 import { HotelDetails } from '../hotelDetails/HotelDetails';
 import { RoomDetails } from '../roomDetails/RoomDetails';
 import InfoIcon from '@material-ui/icons/Info';
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { InfoContainer } from '../infoContainer/InfoContainer';
 const useStyles = makeStyles((theme: Theme) => ({
   vertical: {
@@ -38,9 +39,11 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: theme.spacing(1),
     textTransform: 'capitalize'
   },
-  
+
   button: {
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
+    display: 'flex',
+    alignItems: 'center'
   },
   details: {
     margin: theme.spacing(1)
@@ -51,9 +54,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     width: '100%'
   },
   divider: {
-    margin: theme.spacing(1,0,1,0)
+    margin: theme.spacing(1, 0, 1, 0)
   },
-  
+
   icon: {
     marginRight: theme.spacing(1)
   },
@@ -64,10 +67,12 @@ const useStyles = makeStyles((theme: Theme) => ({
     display: 'flex',
     maxWidth: '300px',
     flexShrink: 2,
-    // width: '100%'
   },
   card: {
     margin: theme.spacing(0.5)
+  },
+  arrow: {
+    marginLeft: theme.spacing(1)
   }
 }))
 
@@ -87,7 +92,7 @@ export interface HotelRowProps {
   reservationSite: string;
   phone: string | number;
   facebookReviews?: string;
-  TripAdvisorReviews?: string;
+  tripAdvisorReviews?: string;
   rooms: Room[];
   email: string;
   col8?: string | number;
@@ -114,17 +119,19 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
       <CardContent className={classes.vertical}>
         <div className={classes.nameRatingContainer}>
           <Button className={classes.button} size='small' href={reservationSite} target='_blank'>
-            <Typography variant='h5' gutterBottom>{name}</Typography>
+            <Typography variant='h5' >{name}</Typography>
+            <ArrowForwardIosIcon className={classes.arrow} fontSize='small' color='primary' />
           </Button>
+
         </div>
         <div className={classes.horizontal}>
           <Card className={clx(classes.detailsLayout, classes.card)}>
             <CardContent>
               <div className={classes.horizontal}>
-            <InfoIcon color='primary' className={classes.icon}/>
-            <Typography>Hotel Details</Typography>
-            </div>
-            <Divider className={classes.divider}/>
+                <InfoIcon color='primary' className={classes.icon} />
+                <Typography>Hotel Details</Typography>
+              </div>
+              <Divider className={classes.divider} />
               <InfoContainer {...props} />
             </CardContent>
           </Card>
@@ -133,7 +140,7 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
               <RoomDetails rooms={props.rooms} />
             </CardContent>
           </Card>
-          <Card className={clx(classes.card,classes.childPolicy)}>
+          <Card className={clx(classes.card, classes.childPolicy)}>
             <CardContent>
               <HotelDetails suiteDetails={suiteDetails || ""} nonSuiteDetails={nonSuiteDetails || ""} childrenPolicy={childrenPolicy || ""} />
             </CardContent>

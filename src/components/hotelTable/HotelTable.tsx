@@ -6,6 +6,7 @@ import {  Button, Card, CardContent, makeStyles, MenuItem, Select, TextField, Th
 import { districts } from '../../fixtures/districts.data';
 import { HotelRowsContainerMemo } from '../hotelRowsContainer/hotelRowsContainer';
 import { isMobile } from '../../platform/platform';
+import { getLocations } from '../../utils/getLocations';
 const useStyles = makeStyles((theme: Theme) => ({
   root: {
     marginRight: theme.spacing(1)
@@ -47,6 +48,7 @@ interface State {
 
 export const HotelTable: React.FC = () => {
   const [location, setLocation] = React.useState('');
+  const locations = getLocations(hotelsData);
   const [searchList, setSearchList] = React.useState<HotelRowProps[]>(hotelsData)
   const [values, setValues] = React.useState<State>({
     minAmount: '',
@@ -64,7 +66,7 @@ export const HotelTable: React.FC = () => {
   }
 
   const handleChange = (event: any) => {
-    setLocation(event.target.value);
+    setLocation(event.target.value)
   };
 
 
@@ -106,6 +108,7 @@ export const HotelTable: React.FC = () => {
             <Typography className={classes.totalHotels}>Selected Hotels {searchList.length}</Typography>
 
             <div className={isMobile() ? classes.vertical : classes.horizontal}>
+
               <Select
                 displayEmpty
                 className={classes.selectContainer}
@@ -122,7 +125,7 @@ export const HotelTable: React.FC = () => {
                 <MenuItem value="">
                   <Typography><em>Filter by location</em></Typography>
                 </MenuItem>
-                {districts.map((district) => {
+                {locations.map((district) => {
                   return (
                     <MenuItem value={district}><Typography variant='body1'>{district}</Typography></MenuItem>
                   )
@@ -148,7 +151,7 @@ export const HotelTable: React.FC = () => {
 
               />
               <div className={clx(classes.buttonsContainer)}>
-                <Button fullWidth={isMobile()} onClick={onSearchClick} variant='outlined' className={classes.button}>Search</Button>
+                <Button disabled={(!location.length && values.minAmount.length <= 0 && values.maxAmount.length <= 0 )} fullWidth={isMobile()} onClick={onSearchClick} variant='outlined' className={classes.button}>Search</Button>
                 <Button fullWidth={isMobile()} onClick={clearFilter} variant='outlined' className={classes.button}>clear filter</Button>
               </div>
             </div>
