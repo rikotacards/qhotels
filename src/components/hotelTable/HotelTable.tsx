@@ -50,6 +50,9 @@ const useStyles = makeStyles((theme: Theme) => ({
   chip: {
     margin: theme.spacing(1)
   },
+  mobileSelect: {
+    width: '100%'
+  }
 }))
 
 interface State {
@@ -129,16 +132,15 @@ export const HotelTable: React.FC = () => {
               <Select
                 variant='outlined'
                 displayEmpty
-                className={clx(classes.selectContainer, classes.marginRight)}
+                className={clx(classes.selectContainer, classes.marginRight, isMobile() && classes.mobileSelect)}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={location}
-                autoWidth
                 fullWidth={isMobile()}
                 placeholder="Districts"
                 onChange={handleChange}
               >
-                <MenuItem value="">
+                <MenuItem value="" className={clx(isMobile() && classes.mobileSelect)}>
                   <Typography><em>Filter by MTR Station</em></Typography>
                 </MenuItem>
                 {locations.map((district) => {
