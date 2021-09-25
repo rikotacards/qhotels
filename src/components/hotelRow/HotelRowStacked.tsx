@@ -6,6 +6,7 @@ import { RoomDetails } from '../roomDetails/RoomDetails';
 import InfoIcon from '@material-ui/icons/Info';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import { InfoContainer } from '../infoContainer/InfoContainer';
+import { isMobile } from '../../platform/platform';
 const useStyles = makeStyles((theme: Theme) => ({
   vertical: {
     display: 'flex',
@@ -69,10 +70,13 @@ const useStyles = makeStyles((theme: Theme) => ({
     flexShrink: 2,
   },
   card: {
-    margin: theme.spacing(0.5)
+    margin: theme.spacing(0.5),
   },
   arrow: {
     marginLeft: theme.spacing(1)
+  },
+  fullWidth: {
+    width: '100%'
   }
 }))
 
@@ -118,7 +122,7 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
   const classes = useStyles();
   return (
     <Card elevation={3} color='primary' className={classes.marginBottom}>
-      <CardContent className={classes.vertical}>
+      <CardContent  className={classes.vertical}>
         <div className={classes.nameRatingContainer}>
           <Button className={classes.button} size='small' href={reservationSite} target='_blank'>
             <Typography variant='h5' >{name}</Typography>
@@ -126,8 +130,8 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
           </Button>
 
         </div>
-        <div className={classes.horizontal}>
-          <Card className={clx(classes.detailsLayout, classes.card)}>
+        <div className={isMobile() ? classes.vertical: classes.horizontal}>
+          <Card elevation={1}  variant='outlined' className={clx(classes.detailsLayout, classes.card, isMobile() && classes.fullWidth)}>
             <CardContent>
               <div className={classes.horizontal}>
                 <InfoIcon color='primary' className={classes.icon} />
@@ -137,12 +141,12 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
               <InfoContainer {...props} />
             </CardContent>
           </Card>
-          <Card className={clx(classes.card, classes.roomDetails)}>
+          <Card elevation={1}  variant='outlined' className={clx(classes.card, classes.roomDetails, isMobile() && classes.fullWidth)}>
             <CardContent>
               <RoomDetails minInt={props.minInt} maxInt={props.maxInt} rooms={props.rooms} />
             </CardContent>
           </Card>
-          <Card className={clx(classes.card, classes.childPolicy)}>
+          <Card elevation={1} variant='outlined' className={clx(classes.card, !isMobile() && classes.childPolicy, isMobile() && classes.fullWidth)}>
             <CardContent>
               <HotelDetails suiteDetails={suiteDetails || ""} nonSuiteDetails={nonSuiteDetails || ""} childrenPolicy={childrenPolicy || ""} />
             </CardContent>

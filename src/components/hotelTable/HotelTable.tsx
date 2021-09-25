@@ -2,7 +2,7 @@ import React from 'react';
 import { HotelRowProps } from '../hotelRow/HotelRowStacked';
 import { hotelsData } from '../../fixtures/hotelsNew.data';
 import clx from 'clsx';
-import {  Button, Card, CardContent, makeStyles, MenuItem, Select, TextField, Theme, Typography } from '@material-ui/core';
+import { Button, Card, CardContent, Chip, makeStyles, MenuItem, Select, TextField, Theme, Typography } from '@material-ui/core';
 import { HotelRowsContainerMemo } from '../hotelRowsContainer/hotelRowsContainer';
 import { isMobile } from '../../platform/platform';
 import { getLocations } from '../../utils/getLocations';
@@ -11,7 +11,9 @@ const useStyles = makeStyles((theme: Theme) => ({
     marginRight: theme.spacing(1)
   },
   selectContainer: {
-    margin: theme.spacing(1)
+    // margin: theme.spacing(1)
+    marginBottom: isMobile() ? theme.spacing(1): 0,
+    height: '40px'
   },
   totalHotels: {
     marginLeft: theme.spacing(1)
@@ -21,6 +23,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   textInput: {
     marginRight: theme.spacing(1),
+    marginBottom: isMobile() ? theme.spacing(1) : 0,
+    display: 'flex'
   },
   card: {
     margin: theme.spacing(0.5)
@@ -31,13 +35,21 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   horizontal: {
     display: 'flex',
-    flexWrap: 'wrap'
+    flexWrap: 'wrap',
+    alignItems: 'center'
   },
   buttonsContainer: {
     margin: theme.spacing(0.5),
     display: 'flex',
+    alignItems: 'center',
     flexDirection: isMobile() ? 'column' : 'row'
-  }
+  },
+  marginRight: {
+    marginRight: theme.spacing(1)
+  },
+  chip: {
+    margin: theme.spacing(1)
+  },
 }))
 
 interface State {
@@ -48,9 +60,9 @@ interface State {
 export const HotelTable: React.FC = () => {
   const [location, setLocation] = React.useState('');
   const locations = getLocations(hotelsData);
-  const[minInt, setMinInt] = React.useState<number|undefined>(undefined);
-  const [maxInt, setMaxInt] = React.useState<number|undefined>(undefined)
- 
+  const [minInt, setMinInt] = React.useState<number | undefined>(undefined);
+  const [maxInt, setMaxInt] = React.useState<number | undefined>(undefined)
+
   const [searchList, setSearchList] = React.useState<HotelRowProps[]>(hotelsData)
   const [values, setValues] = React.useState<State>({
     minAmount: '',
@@ -81,7 +93,7 @@ export const HotelTable: React.FC = () => {
     };
 
   const onSearchClick = () => {
-    const minInt = parseInt(values.minAmount || '0') 
+    const minInt = parseInt(values.minAmount || '0')
     const maxInt = parseInt(values.maxAmount || '99999')
     setMinInt(minInt);
     setMaxInt(maxInt)
@@ -111,18 +123,16 @@ export const HotelTable: React.FC = () => {
       <div >
         <Card className={clx(classes.card)}>
           <CardContent >
-            <Typography className={classes.totalHotels}>Selected Hotels {searchList.length}</Typography>
-
+            <Chip className={classes.chip} label={`Selected Hotels ${searchList.length}`}/>
             <div className={isMobile() ? classes.vertical : classes.horizontal}>
 
               <Select
+                variant='outlined'
                 displayEmpty
-                className={classes.selectContainer}
-                variant='standard'
+                className={clx(classes.selectContainer, classes.marginRight)}
                 labelId="demo-simple-select-label"
                 id="demo-simple-select"
                 value={location}
-                label="Districts"
                 autoWidth
                 fullWidth={isMobile()}
                 placeholder="Districts"
@@ -138,6 +148,7 @@ export const HotelTable: React.FC = () => {
                 })}
               </Select>
               <TextField
+                variant='outlined'
                 id="outlined-adornment-amount"
                 value={values.minAmount}
                 size='small'
@@ -147,6 +158,8 @@ export const HotelTable: React.FC = () => {
                 fullWidth={isMobile()}
               />
               <TextField
+                variant='outlined'
+
                 id="outlined-adornment-amount"
                 value={values.maxAmount}
                 size='small'
@@ -157,8 +170,8 @@ export const HotelTable: React.FC = () => {
 
               />
               <div className={clx(classes.buttonsContainer)}>
-                <Button disabled={(!location.length && values.minAmount.length <= 0 && values.maxAmount.length <= 0 )} fullWidth={isMobile()} onClick={onSearchClick} variant='outlined' className={classes.button}>Search</Button>
-                <Button fullWidth={isMobile()} onClick={clearFilter} variant='outlined' className={classes.button}>clear filter</Button>
+                <Button disabled={(!location.length && values.minAmount.length <= 0 && values.maxAmount.length <= 0)} fullWidth={isMobile()} onClick={onSearchClick} variant='outlined' className={classes.button}>Search</Button>
+                <Button  fullWidth={isMobile()} onClick={clearFilter} variant='outlined' className={clx(classes.button)}>clear filter</Button>
               </div>
             </div>
           </CardContent>

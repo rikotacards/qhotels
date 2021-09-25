@@ -32,7 +32,8 @@ const useStyles = makeStyles((theme: Theme) => ({
   reviewButton: {
     marginRight: theme.spacing(1),
     marginBottom: theme.spacing(1),
-    textTransform: 'capitalize'
+    textTransform: 'capitalize',
+    display: 'flex'
   },
   rowContainer: {
     display: 'flex',
@@ -128,7 +129,10 @@ export const InfoContainer: React.FC<HotelRowProps> = ({ email, phone, address, 
           <RateReviewIcon className={classes.icon} fontSize='small' color='primary' />
           <div>
           <Button disabled={!facebookReviews} size='small' fullWidth className={classes.reviewButton} variant='outlined' target='_blank' href={facebookReviews || ""}>
+            <div>
             <Typography variant='body1'>{!facebookReviews ? 'No Fb Reviews' : 'Facebook Reviews'}</Typography>
+            <Typography variant='caption'><i>Currently only links to hotel specific reviews on Desktop</i></Typography>
+            </div>
           </Button>
           <Button disabled={!tripAdvisorReviews} size='small' fullWidth className={classes.button} variant='outlined'target='_blank' href={tripAdvisorReviews || ""}>
             <Typography className={classes.buttonText} variant='body1'>{!tripAdvisorReviews ? 'No TripAdvisor Reviews': 'TripAdvisor Reviews'}</Typography></Button>
