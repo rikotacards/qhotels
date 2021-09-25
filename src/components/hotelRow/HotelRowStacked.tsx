@@ -1,14 +1,10 @@
 import React from 'react';
-import PhoneIcon from '@material-ui/icons/Phone';
-import StarIcon from '@material-ui/icons/Star';
-import EmailIcon from '@material-ui/icons/Email';
-import LocationOnIcon from '@material-ui/icons/LocationOn';
-import RateReviewIcon from '@material-ui/icons/RateReview';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
-import { Button, Card, CardContent, Chip, Collapse, makeStyles, Paper, Theme, Typography } from '@material-ui/core';
+import clx from 'clsx'
+import { Button, Card, CardContent, Divider, makeStyles, Theme, Typography } from '@material-ui/core';
 import { HotelDetails } from '../hotelDetails/HotelDetails';
 import { RoomDetails } from '../roomDetails/RoomDetails';
+import InfoIcon from '@material-ui/icons/Info';
+import { InfoContainer } from '../infoContainer/InfoContainer';
 const useStyles = makeStyles((theme: Theme) => ({
   vertical: {
     display: 'flex',
@@ -17,77 +13,61 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   horizontal: {
     display: 'flex',
-    marginBottom: theme.spacing(1)
+    marginBottom: theme.spacing(1),
+    justifyContent: 'flex-start',
+    flexWrap: 'wrap'
   },
   detailsLayout: {
     display: 'flex',
-    flexDirection: 'column'
+    flexGrow: 0
+
   },
   roomDetails: {
     display: 'flex',
-    flexDirection: 'column',
-    marginLeft: theme.spacing(1)
+    marginLeft: theme.spacing(1),
+    maxWidth: '450px',
+    flexGrow: 1,
+    // width: '100%'
   },
   reviewsContainer: {
     display: 'flex',
-    alignItems: 'center'
+    alignItems: 'center',
+    flexGrow: 1
   },
   reviewButton: {
     marginRight: theme.spacing(1),
     textTransform: 'capitalize'
   },
-  rowContainer: {
-    display: 'flex',
-    width: '100%',
-  },
-  locationDetails: {
-    display: 'flex',
-    marginLeft: theme.spacing(1),
-    marginBottom: theme.spacing(1)
-  },
-  district: {
-    width: '80px'
-  },
-  column: {
-    marginLeft: theme.spacing(1),
-    marginRight: theme.spacing(1)
-  },
-  address: {
-    marginBottom: theme.spacing(1),
-    marginLeft: theme.spacing(1)
-  },
+  
   button: {
     textTransform: 'capitalize'
   },
-  colLabel: {
-    // fontWeight: 'bold'
-  },
   details: {
     margin: theme.spacing(1)
-  },
-  iconTextContainer: {
-    display: 'flex',
-    alignItems: 'center',
-    marginBottom: theme.spacing(1)
   },
   nameRatingContainer: {
     display: 'flex',
     alignItems: 'center',
     width: '100%'
   },
-  buttonText: {
-    textOverflow: 'elipsis',
-    overflow: 'hidden',
-    whiteSpace: 'nowrap'
+  divider: {
+    margin: theme.spacing(1,0,1,0)
   },
+  
   icon: {
     marginRight: theme.spacing(1)
   },
-  infoContainer: {
-    marginLeft: theme.spacing(1)
-  },
   marginBottom: {
     marginBottom: theme.spacing(1)
+  },
+  childPolicy: {
+    display: 'flex',
+    maxWidth: '300px',
+    flexShrink: 2,
+    // width: '100%'
+  },
+  card: {
+    margin: theme.spacing(0.5)
   }
 }))
 
@@ -123,11 +103,8 @@ export interface HotelRowProps {
 
 export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
 
-  const [isOpen, setOpen] = React.useState<boolean>(false)
-  const handleClick = () => {
-    setOpen(!isOpen);
-  }
-  const { name, location, address, reservationSite, phone, facebookReviews, TripAdvisorReviews, email } = props;
+  console.log('rendered')
+  const { name, reservationSite } = props;
   const suiteDetails = props.col10;
   const nonSuiteDetails = props.col12;
   const childrenPolicy = props.col15;
@@ -139,71 +116,28 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
           <Button className={classes.button} size='small' href={reservationSite} target='_blank'>
             <Typography variant='h5' gutterBottom>{name}</Typography>
           </Button>
-          {/* <div className={classes.iconTextContainer}>
-            <StarIcon className={classes.icon} color='primary' />
-            <Typography variant='body1'>5/5</Typography>
-          </div> */}
         </div>
         <div className={classes.horizontal}>
-          <div className={classes.detailsLayout}>
-
-            <div className={classes.infoContainer}>
-
-              <div className={classes.iconTextContainer}>
-                <MonetizationOnIcon className={classes.icon} fontSize='small' color='primary' />
-                <Typography variant='body1'>{'400-1200'}</Typography>
-              </div>
-              <div className={classes.iconTextContainer}>
-                <EmailIcon className={classes.icon} fontSize='small' color='primary' />
-                <Typography variant='body1'>{email}</Typography>
-              </div>
-
-
-              <div className={classes.iconTextContainer}>
-                <PhoneIcon className={classes.icon} color='primary' fontSize='small' />
-                <Typography variant='body1'>{phone}</Typography>
-              </div>
-              <div className={classes.iconTextContainer}>
-                <LocationOnIcon fontSize='small' color='primary' className={classes.icon} />
-                <div>
-                  <Typography variant='body1'>{address}</Typography>
-                  <Typography variant='caption'>{location}</Typography>
-                </div>
-              </div>
-
-
-
-              <div className={classes.reviewsContainer}>
-                <div className={classes.iconTextContainer}>
-                  <RateReviewIcon className={classes.icon} fontSize='small' color='primary' />
-                  <Button size='small' className={classes.reviewButton} variant='outlined' target='_blank' href='https://www.facebook.com/groups/2788738214495345/search/?q=four%20points'>
-                    <Typography variant='body1'>Facebook Reviews</Typography>
-                  </Button>
-                  <Button size='small' className={classes.button} variant='outlined'>
-                    <Typography className={classes.buttonText} variant='body1'>Trip Advisor Reviews</Typography></Button>
-                </div>
-              </div>
-              <div className={classes.iconTextContainer}>
-                <ExpandMoreIcon color='primary' fontSize='small' className={classes.icon} />
-                <Button
-                  onClick={handleClick}
-                  size='small'
-                  variant='outlined'
-                  className={classes.reviewButton}>
-                  <Typography variant='body1'>
-                    Expand for Children Policy
-          </Typography>
-                </Button>
-              </div>
+          <Card className={clx(classes.detailsLayout, classes.card)}>
+            <CardContent>
+              <div className={classes.horizontal}>
+            <InfoIcon color='primary' className={classes.icon}/>
+            <Typography>Hotel Details</Typography>
             </div>
-
-            <Collapse in={isOpen}>
+            <Divider className={classes.divider}/>
+              <InfoContainer {...props} />
+            </CardContent>
+          </Card>
+          <Card className={clx(classes.card, classes.roomDetails)}>
+            <CardContent>
+              <RoomDetails rooms={props.rooms} />
+            </CardContent>
+          </Card>
+          <Card className={clx(classes.card,classes.childPolicy)}>
+            <CardContent>
               <HotelDetails suiteDetails={suiteDetails || ""} nonSuiteDetails={nonSuiteDetails || ""} childrenPolicy={childrenPolicy || ""} />
-            </Collapse>
-          </div>
-          <div className={classes.roomDetails}>
-            <RoomDetails rooms={props.rooms} />
-          </div>
+            </CardContent>
+          </Card>
         </div>
       </CardContent>
     </Card>

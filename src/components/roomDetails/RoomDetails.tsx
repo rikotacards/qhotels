@@ -1,5 +1,5 @@
 import classes from '*.module.css';
-import { Typography, Theme, makeStyles, Card } from '@material-ui/core';
+import { Typography, Theme, makeStyles, Card, Divider } from '@material-ui/core';
 import React from 'react';
 import { mapRooms } from '../../utils/mapRooms';
 import { Room } from '../hotelRow/HotelRowStacked';
@@ -31,6 +31,10 @@ const useStyles = makeStyles((theme: Theme) => ({
   },
   icon: {
     marginRight: theme.spacing(1)
+  },
+  divider: {
+    marginTop: theme.spacing(1),
+    marginBottom: theme.spacing(1)
   }
 }))
 
@@ -43,9 +47,10 @@ export const RoomDetails: React.FC<RoomDetailsProps> = ({ rooms }) => {
   return (
     <>
     <div className={classes.homeTextContainer}>
-      <HomeIcon className={classes.icon} color ='primary' fontSize='small'/>
-      <Typography>Room Details</Typography>
+      <HomeIcon className={classes.icon} color ='primary'/>
+      <Typography>Room Details (in HKD)</Typography>
     </div>
+    <Divider className={classes.divider}/>
       <div className={classes.container}>
         {suiteRoomNames.length > 0 && <div className={classes.rooms}>
           <Typography className={classes.roomName}>Suite</Typography>

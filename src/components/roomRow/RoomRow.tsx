@@ -1,5 +1,5 @@
 import React from 'react';
-import { Theme, makeStyles, Typography, Card, CardContent } from '@material-ui/core';
+import { Theme, makeStyles, Typography, Card, CardContent, Divider } from '@material-ui/core';
 import { Room } from '../hotelRow/HotelRowStacked';
 
 const useStyles = makeStyles((theme: Theme) => ({
@@ -34,10 +34,10 @@ export const RoomRow: React.FC<RoomRowProps> = ({ room }) => {
       <div className={classes.pricePaxContainer}>
         <div className={classes.labelValueContainer}>
           <Typography>
-            Price (HKD):
+            Price:
           </Typography>
           <Typography className={classes.value}>
-            {room.price}
+            ${room.price}
           </Typography>
         </div>
         <div className={classes.labelValueContainer}>
@@ -58,8 +58,8 @@ export const RoomRow: React.FC<RoomRowProps> = ({ room }) => {
         </Typography>
       </div>}
       {room.info !== undefined && <div className={classes.labelValueContainer}>
-        <Typography>Info:</Typography>
-        <Typography className={classes.value}>{room.info}</Typography>
+        <Divider/>
+        <Typography variant='caption'>{room.info}</Typography>
       </div>}
       
     </Card>
