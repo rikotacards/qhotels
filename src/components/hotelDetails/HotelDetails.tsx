@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles, Theme, Typography, Divider, Card, CardContent } from '@material-ui/core'
+import { makeStyles, Theme, Typography, Divider } from '@material-ui/core'
 import ChildFriendlyIcon from '@material-ui/icons//ChildFriendly';
 const useStyles = makeStyles((theme: Theme) => ({
   pricingDetails: {
@@ -57,7 +57,7 @@ export const NewLineText: React.FC<NewLineTextProps> = (props) => {
 }
 
 export const HotelDetails: React.FC<HotelDetailsProps> = (props) => {
-  const { suiteDetails, nonSuiteDetails, childrenPolicy } = props;
+  const { childrenPolicy } = props;
   const classes = useStyles();
   return (
     <div>

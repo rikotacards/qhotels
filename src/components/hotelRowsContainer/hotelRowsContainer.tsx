@@ -1,15 +1,17 @@
 import { Card, CardContent, Typography } from '@material-ui/core';
 import React from 'react';
-import { HotelRowProps, HotelRowStacked, Room } from '../hotelRow/HotelRowStacked';
+import { HotelRowProps, HotelRowStacked } from '../hotelRow/HotelRowStacked';
 
 interface HotelRowsContainerProps {
-  rooms: HotelRowProps[]
+  rooms: HotelRowProps[];
+  minInt?: number;
+  maxInt?: number;
 }
 
-const HotelRowsContainer: React.FC<HotelRowsContainerProps> = ({ rooms }) => {
+const HotelRowsContainer: React.FC<HotelRowsContainerProps> = ({ rooms, minInt, maxInt }) => {
   const rows = rooms.map((row: HotelRowProps, i) => {
    
-    return <HotelRowStacked key={row.name} {...row} />
+    return <HotelRowStacked minInt={minInt} maxInt={maxInt} key={row.name} {...row} />
   })
 
   return (

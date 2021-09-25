@@ -1,13 +1,11 @@
 import React from 'react';
 import { makeStyles, Typography, Theme, Button } from '@material-ui/core'
 import PhoneIcon from '@material-ui/icons/Phone';
-import StarIcon from '@material-ui/icons/Star';
 import EmailIcon from '@material-ui/icons/Email';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import RateReviewIcon from '@material-ui/icons/RateReview';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 import { HotelRowProps } from '../hotelRow/HotelRowStacked';
-import clx from 'clsx'
 const useStyles = makeStyles((theme: Theme) => ({
   vertical: {
     display: 'flex',
@@ -112,7 +110,7 @@ export const InfoContainer: React.FC<HotelRowProps> = ({ email, phone, address, 
       </div>
       <div className={classes.iconTextContainer}>
         <EmailIcon className={classes.icon} fontSize='small' color='primary' />
-        <Typography variant='body1'>{email}</Typography>
+        <Typography variant='body1'>{email.split(' ').join('')}</Typography>
       </div>
       <div className={classes.iconTextContainer}>
         <PhoneIcon className={classes.icon} color='primary' fontSize='small' />

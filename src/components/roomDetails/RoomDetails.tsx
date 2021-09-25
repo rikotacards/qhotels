@@ -1,18 +1,20 @@
-import classes from '*.module.css';
 import { Typography, Theme, makeStyles, Card, Divider } from '@material-ui/core';
 import React from 'react';
 import { mapRooms } from '../../utils/mapRooms';
 import { Room } from '../hotelRow/HotelRowStacked';
 import { RoomRow } from '../roomRow/RoomRow';
 import HomeIcon from '@material-ui/icons/Home';
-// import BedroomParentIcon from '@mui/icons-material/BedroomParent';
+import { isMobile } from '../../platform/platform';
 interface RoomDetailsProps {
   rooms: Room[];
+  minInt?: number;
+  maxInt?: number;
 }
 
 const useStyles = makeStyles((theme: Theme) => ({
   container: {
-    display: 'flex'
+    display: 'flex',
+    flexDirection: isMobile()  ? 'column' : 'row'
   },
   rooms: {
     display: 'flex',
@@ -35,11 +37,14 @@ const useStyles = makeStyles((theme: Theme) => ({
   divider: {
     marginTop: theme.spacing(1),
     marginBottom: theme.spacing(1)
+  },
+  matchedSearch: {
+    backgroundColor: 'green',
   }
 }))
 
 
-export const RoomDetails: React.FC<RoomDetailsProps> = ({ rooms }) => {
+export const RoomDetails: React.FC<RoomDetailsProps> = ({ rooms, minInt, maxInt }) => {
   const { suite, nonSuite } = mapRooms(rooms);
   const suiteRoomNames = Object.keys(suite);
   const classes = useStyles();
@@ -62,7 +67,7 @@ export const RoomDetails: React.FC<RoomDetailsProps> = ({ rooms }) => {
                     <Typography>{name}</Typography>
                     {suite[name].map((room) => {
                       return (
-                        <RoomRow room={room} />
+                        <RoomRow minInt={minInt} maxInt={maxInt} room={room} />
                       )
                     })}
 
@@ -85,7 +90,7 @@ export const RoomDetails: React.FC<RoomDetailsProps> = ({ rooms }) => {
                     <Typography>{name}</Typography>
                     {nonSuite[name].map((room) => {
                       return (
-                        <RoomRow room={room} />
+                        <RoomRow minInt={minInt} maxInt={maxInt} room={room} />
                       )
                     })}
 

@@ -88,6 +88,7 @@ export interface Room {
 export interface HotelRowProps {
   name: string;
   location: string;
+  subway: string;
   address: string;
   reservationSite: string;
   phone: string | number;
@@ -104,11 +105,12 @@ export interface HotelRowProps {
   col14?: string;
   col15?: string;
   col16?: string;
+  minInt?: number;
+  maxInt?: number;
 }
 
 export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
 
-  console.log('rendered')
   const { name, reservationSite } = props;
   const suiteDetails = props.col10;
   const nonSuiteDetails = props.col12;
@@ -137,7 +139,7 @@ export const HotelRowStacked: React.FC<HotelRowProps> = (props) => {
           </Card>
           <Card className={clx(classes.card, classes.roomDetails)}>
             <CardContent>
-              <RoomDetails rooms={props.rooms} />
+              <RoomDetails minInt={props.minInt} maxInt={props.maxInt} rooms={props.rooms} />
             </CardContent>
           </Card>
           <Card className={clx(classes.card, classes.childPolicy)}>

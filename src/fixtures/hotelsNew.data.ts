@@ -4,10 +4,13 @@ export const hotelsData: HotelRowProps[] = [
   {
     "name": "Best Western Plus Hotel Hong Kong",
     "location": "Central and Western",
+    subway: 'Sai Ying Pun',
     "address": "308 Des Voeux Road West",
     "reservationSite": "http://www.bestwesternplushot\nelhongkong.com",
     "email": "hotel@bestwesternplushotel.com",
     "phone": 34103333,
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d573158-Reviews-Best_Western_Plus_Hotel_Hong_Kong-Hong_Kong.html',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=best%20western%20plus',
     "col8": 25598499,
     "col9": 129,
     rooms: [
@@ -46,6 +49,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "CM+ Hotels & Serviced Apartments",
+    subway: 'Sheung Wan',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=CM%2B%20Hotels%20%26%20Serviced%20Apartments',
+    tripAdvisorReviews:'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d15020323-Reviews-CM_Hotels_and_Serviced_Apartments-Hong_Kong.html',
     "location": "Central and Western",
     "address": "No. 16 Connaught Road West, Hong Kong",
     "reservationSite": "https://cmplus.com.hk/zh/quara\nntine-package/",
@@ -90,6 +96,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Courtyard by Marriott Hong Kong",
+    tripAdvisorReviews:'',
+    subway: 'Sai Ying Pun',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Courtyard%20by%20Marriott%20',
     "location": "Central and Western",
     "address": "167 Connaught Road West, Hong Kong",
     "reservationSite": "www.courtyardhongkong.com",
@@ -172,7 +181,10 @@ export const hotelsData: HotelRowProps[] = [
 
     ],
     "name": "Grand City Hotel",
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d8563150-Reviews-Grand_City_Hotel-Hong_Kong.html',
     "location": "Central and Western",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=%22Grand%20City%20Hotel%22',
+    subway: 'Sai Ying Pun',
     "address": "338 Queen's Road West",
     "reservationSite": "http://www.grandcityhotelhong\nkong.com",
     "email": "hotel@grandcityhotelhongkong.com",
@@ -188,6 +200,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "JEN Hong Kong by Shangri-La",
+    subway: 'HKU',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search?q=%22hotel%20jen%22',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d299534-Reviews-JEN_Hong_Kong_by_Shangri_La-Hong_Kong.html',
     "location": "Central and Western",
     "address": "508 Queen's Road West, Hong Kong SAR",
     "reservationSite": "https://www.shangri-\nla.com/en/hotels/jen/hongkong/\nwesterndistrict",
@@ -252,6 +267,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Lan Kwai Fong Hotel @ Kau U Fong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Lan%20Kwai%20Fong%20Hotel%20%40%20Kau%20U%20Fong',
+    subway: 'Central',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d603110-Reviews-Lan_Kwai_Fong_Hotel_Kau_U_Fong-Hong_Kong.html',
     "location": "Central and Western",
     "address": "No.3 Kau U Fong, Central, Hong Kong",
     "reservationSite": "https://www.dcollection.com/en\n/lan-kwai-fong-hotel-kau-u-\nfong/",
@@ -329,7 +347,10 @@ export const hotelsData: HotelRowProps[] = [
     ]
   },
   {
-    "name": "One-Eight-One Hotel & Serviced\nResidences",
+    "name": "One-Eight-One Hotel & Serviced Residences",
+    subway: "HKU",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=%22One-Eight-One%20Hotel%20%26%20Serviced%20Residences%27',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d12403779-Reviews-One_Eight_One_Hotel_Serviced_Residences-Hong_Kong.html',
     "location": "Central and Western",
     "address": "181 Connaught Road West, Hong Kong",
     "reservationSite": "www.one-eight-one.com",
@@ -394,6 +415,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Ovolo Central",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=ovolo%20central',
+    subway: 'Central',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d1014612-Reviews-Ovolo_Central-Hong_Kong.html', 
     "location": "Central and Western",
     "address": "2 Arbuthnot Road, Central, Hong Kong",
     "reservationSite": "https://ovolohotels.com/ovolo/o\nffers/meet-your-quarantine-\nconcierge/",
@@ -448,6 +472,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Ramada Hong Kong Harbour View",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Ramada%20Hong%20Kong%20Harbour%20View',
+    subway: 'Sai Ying Pun',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d3308059-Reviews-Ramada_Hong_Kong_Harbour_View-Hong_Kong.html',
     "location": "Central and Western",
     "address": "239 Queen's Road West Hong Kong",
     "reservationSite": "http://www.ramadahongkongha\nrbourview.com/",
@@ -475,7 +502,10 @@ export const hotelsData: HotelRowProps[] = [
     ]
   },
   {
-    "name": "The Landmark Mandarin Oriental Hong\nKong",
+    "name": "The Landmark Mandarin Oriental Hong Kong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=The%20Landmark%20Mandarin%20Oriental%20Hong%20Kong',
+    subway: 'Central',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d575999-Reviews-The_Landmark_Mandarin_Oriental_Hong_Kong-Hong_Kong.html', 
     "location": "Central and Western",
     "address": "The Landmark, 15 Queen's Road Central, Hong Kong",
     "reservationSite": "https://www.mandarinoriental.c\nom/hong-kong/the-\nlandmark/luxury-hotel",
@@ -581,6 +611,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Ramada Hong Kong Grand View",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Ramada%20Hong%20Kong%20Grand%20View',
+    subway: 'North Point',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d305875-Reviews-Ramada_Wyndham_Hong_Kong_Grand_View-Hong_Kong.html',
     "location": "Eastern",
     "address": "No.88 Chun Yeung Street,\nNorth Point, Hong Kong Hong Kong",
     "reservationSite": "www.ramadahongkonggrandvie\nw.com",
@@ -634,8 +667,11 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
 
-    "name": "Four Points by Sheraton Hong Kong,\nTung Chung",
+    "name": "Four Points by Sheraton Hong Kong, Tung Chung",
     "location": "Islands",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Four%20Points%20by%20Sheraton%20Hong%20Kong%2C%20Tung%20Chung',
+    subway: 'Tung Chung',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d23170913-Reviews-Four_Points_by_Sheraton_Hong_Kong_Tung_Chung-Hong_Kong.html', 
     "address": "9 Yi Tung Road, Tung Chung, Lantau Island, Hong Kong",
     "reservationSite": "https://www.marriott.com/hotel\ns/hotel-deals/details/hkgfp-\nfour-points-hong-kong-tung-\nchung/off-19568",
     "email": "fp.hkgfp.reservations@fourpoints.c\nom",
@@ -677,6 +713,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Regal Airport Hotel",
+    subway: 'Tung Chung',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Regal%20Airport%20Hotel',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d302173-Reviews-Regal_Airport_Hotel-Hong_Kong.html', 
     "location": "Islands",
     "address": "9 Cheong Tat Road, Hong Kong International Airport,\nChek Lap Kok, Hong Kong",
     "reservationSite": "https://www.regalhotel.com/reg\nal-airport-hotel",
@@ -815,7 +854,10 @@ export const hotelsData: HotelRowProps[] = [
     ]
   },
   {
-    "name": "Bridal Tea House Hotel Hung Hom\nGillies Avenue South",
+    "name": "Bridal Tea House Hotel Hung Hom, Gillies Avenue South",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Bridal%20Tea%20House%20Hotel%20',
+    subway: 'Hung Hom',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d627800-Reviews-Bridal_Tea_House_Hotel_Hung_Hom_Gillies_Road-Hong_Kong.html', 
     "location": "Kowloon City",
     "address": "No. 69 Gillies Avenue South, Hung Hom",
     "reservationSite": "https://bthhotel.com",
@@ -841,6 +883,9 @@ export const hotelsData: HotelRowProps[] = [
   {
     "name": "iclub Ma Tau Wai Hotel",
     "location": "Kowloon City",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=iclub%20Ma%20Tau%20Wai%20Hotel',
+    subway: 'To Kwa Wan',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d12361895-Reviews-Iclub_Ma_Tau_Wai_Hotel-Hong_Kong.html', 
     "address": "8 Ha Heung Road, Ma Tau Wai, Hong Kong",
     "reservationSite": "https://www.iclub-\nhotels.com/iclub-ma-tau-wai-\nhotel",
     "email": "servicedesk@matauwai.iclub-\nhotels.com",
@@ -930,6 +975,9 @@ export const hotelsData: HotelRowProps[] = [
   {
     "name": "Kerry Hotel, Hong Kong",
     "location": "Kowloon City",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=%22Kerry%20hotel%22',
+    subway: 'Hung Hom Bay',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d11643657-Reviews-Kerry_Hotel_Hong_Kong-Hong_Kong.html', 
     "address": "38 Hung Luen Road, Hung Hom Bay, Kowloon Hong\nKong SAR",
     "reservationSite": "http://www.shangri-\nla.com/tc/hongkong/kerry/",
     "email": "csteam.hongkong@shangri-la.com",
@@ -959,7 +1007,10 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Metropark Hotel Kowloon",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=%22Metropark%20Hotel%20Kowloon%22',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d305947-Reviews-Metropark_Hotel_Kowloon-Hong_Kong.html', 
     "location": "Kowloon City",
+    subway: "Mong Kok",
     "address": "75 Waterloo Road, Kowloon, Hong Kong",
     "reservationSite": "www.MetroparkHotelKowloon.\ncom",
     "email": "hotel.hkkl@metroparkhotels.com",
@@ -1026,6 +1077,9 @@ export const hotelsData: HotelRowProps[] = [
   {
     "name": "Regal Oriental Hotel",
     "location": "Kowloon City",
+    subway: 'KowLoon Tong',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=%22Regal%20Oriental%22',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d302180-Reviews-Regal_Oriental_Hotel-Hong_Kong.html',
     "address": "30 - 38 Sa Po Road, Kowloon City, Hong Kong",
     "reservationSite": "https://www.regalhotel.com/reg\nal-oriental-hotel",
     "email": "roh.foam@regalhotel.com",
@@ -1175,6 +1229,9 @@ export const hotelsData: HotelRowProps[] = [
 
   {
     "name": "Dorsett Tsuen Wan, Hong Kong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Dorsett%20Tsuen%20Wan%2C%20Hong%20Kong',
+    subway: "Tsuen Wan",
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d5603830-Reviews-Dorsett_Tsuen_Wan_Hong_Kong-Hong_Kong.html',
     "location": "Kwai Tsing District",
     "address": "28 Kin Chuen Street, Kwai Chung, Hong Kong",
     "reservationSite": "https://www.dorsetthotels.com/\nzh-hk/dorsett-tsuen-\nwan/offers/4 14 min16 nights\nspecial.html",
@@ -1281,8 +1338,11 @@ export const hotelsData: HotelRowProps[] = [
     ]
   },
   {
-    "name": "Nina Hotel Island South (Formerly\nL'hotel Island South)",
+    "name": "Nina Hotel Island South (Formerly L'hotel Island South)",
     "location": "Southern District",
+    "subway": "Wong Chuk Hang",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Nina%20Hotel',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d649076-Reviews-Nina_Hotel_Tsuen_Wan_West-Hong_Kong.html',
     "address": "55 Wong Chuk Hang Road, Aberdeen, Hong Kong",
     "reservationSite": "https://www.ninahotelgroup.co\nm/en/nina-hotel-island-\nsouth/quarantine",
     "email": "reservations.is @ninahotelgroup.com",
@@ -1391,6 +1451,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Ovolo Southside",
+    subway: "Wong Chuk Hang",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=ovolo%20southside',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d6419088-Reviews-Ovolo_Southside-Hong_Kong.html',
     "location": "Southern District",
     "address": "64 Wong Chuk Hang Road, Wong Chuk Hang",
     "reservationSite": "https://ovolohotels.com/ovolo/o\nffers/meet-your-quarantine-\nconcierge/",
@@ -1487,7 +1550,10 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Silka Far East Hotel Hong Kong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Silka%20Far%20East%20Hotel%20Hong%20Kong',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d628550-Reviews-Silka_Far_East_Hotel-Hong_Kong.html', 
     "location": "Tsuen Wan",
+    subway: 'Tseun Wan',
     "address": "135 - 143 Castle Peak Road,\nTsuen Wan, New Terrorites",
     "reservationSite": "www.silkahotels.com/fareast",
     "email": "info.fareast@silkahotels.com",
@@ -1523,7 +1589,10 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Best Western Hotel Causeway Bay",
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d2185676-Reviews-Best_Western_Hotel_Causeway_Bay-Hong_Kong.html',
     "location": "Wanchai",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Best%20Western%20Hotel%20Causeway%20Bay',
+    subway: 'Causeway Bay',
     "address": "38 Bowrington Road, Causeway Bay",
     "reservationSite": "http://www.bestwesternhotelho\nngkong.com",
     "email": "rSvn@bestwesternhotelhongkong.co",
@@ -1552,6 +1621,9 @@ export const hotelsData: HotelRowProps[] = [
 
   {
     "name": "Crowne Plaza Hong Kong Causeway Bay",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Crowne%20Plaza',
+    subway: 'Causeway Bay',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d1467776-Reviews-Crowne_Plaza_Hong_Kong_Causeway_Bay_an_IHG_hotel-Hong_Kong.html',
     "location": "Wanchai",
     "address": "8 Leighton Road, Causeway Bay, Hong Kong",
     "reservationSite": "www.cphongkong.com",
@@ -1654,6 +1726,9 @@ export const hotelsData: HotelRowProps[] = [
   {
 
     "name": "Dorsett Wanchai Hong Kong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Dorsett%20Wanchai%20Hong%20Kong',
+    subway: 'Wanchai',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d483282-Reviews-Dorsett_Wanchai-Hong_Kong.html', 
     "location": "Wanchai",
     "address": "387 - 397 Queen's Road East, Wan Chai, Hong Kong",
     "reservationSite": "https://www.wanchai.dorsetthot\nels.com/",
@@ -1742,6 +1817,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Eco Tree Hotel Causeway Bay",
+    subway: 'Causeway Bay',
+    facebookReviews: '',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d15153299-Reviews-Eco_Tree_Hotel_Causeway_Bay-Hong_Kong.html', 
     "location": "Wanchai",
     "address": "15 Mercury Street, Causeway Bay, Hong Kong",
     "reservationSite": "https://causewaybay.ecotreehot\nel.com.hk/home/",
@@ -1806,6 +1884,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Hotel Indigo Hong Kong Island",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Hotel%20Indigo%20Hong%20Kong%20Island',
+    subway: 'Wanchai',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d3689572-Reviews-Hotel_Indigo_Hong_Kong_Island_an_IHG_hotel-Hong_Kong.html',
     "location": "Wanchai",
     "address": "No. 246 Queen's Road East, Hong Kong",
     "reservationSite": "www.hotelindigo.com/hongkon",
@@ -1861,7 +1942,10 @@ export const hotelsData: HotelRowProps[] = [
   {
 
     "name": "Mira Moon Hotel",
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d3445901-Reviews-Mira_Moon_Hotel-Hong_Kong.html',
     "location": "Wanchai",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Mira%20Moon%20Hotel',
+    subway: 'Causeway Bay',
     "address": "388 Jaffe Road, Causeway Bay, Hong Kong",
     "reservationSite": "https://www.miramoonhotel.co\nEl",
     "email": "enquiry@miramoonhotel.com",
@@ -1937,7 +2021,10 @@ export const hotelsData: HotelRowProps[] = [
   {
 
     "name": "Empire Hotel Causeway Bay",
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d1236984-Reviews-The_Empire_Hotel_Hong_Kong_Causeway_Bay-Hong_Kong.html', 
     "location": "Wanchai",
+    subway: 'Causeway Bay',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Empire%20Hotel%20Causeway%20Bay',
     "address": "No. 8 Wing Hing Street, Hong Kong",
     "reservationSite": "http://www.empirehotel.com.hk",
     "email": "reservations-cwb@empirehotel-\nhongkong.com",
@@ -2028,6 +2115,9 @@ export const hotelsData: HotelRowProps[] = [
   {
 
     "name": "Empire Prestige Causeway Bay",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Empire%20Prestige%20Causeway%20Bay',
+    subway: 'Causeway Bay',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d1236984-Reviews-The_Empire_Hotel_Hong_Kong_Causeway_Bay-Hong_Kong.html', 
     "location": "Wanchai",
     "address": "No. 8A Wing Hing Street, Hong Kong",
     "reservationSite": "http://www.empirehotel.com.hk",
@@ -2075,7 +2165,10 @@ export const hotelsData: HotelRowProps[] = [
   {
 
     "name": "Pentahotel Hong Kong, Kowloon",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Pentahotel',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d4585733-Reviews-Pentahotel_Hong_Kong_Kowloon-Hong_Kong.html',
     "location": "Wong Tai Sin",
+    subway: 'Diamond Hill',
     "address": "19 Luk Hop Street, San Po Kong, Kowloon, Hong Kong",
     "reservationSite": "www.pentahotelhongkongkowl\noon.com",
     "email": "reservations.kowloon@pentahotelsa\nsia.com",
@@ -2137,11 +2230,14 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
 
-    "name": "Bridal Tea House Hotel Yau Ma Tei\nWing Sing Lane",
+    "name": "Bridal Tea House Hotel Yau Ma Tei Wing Sing Lane",
     "location": "Yau Tsim Mong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Bridal%20Tea%20House%20Hotel%20Yau%20Ma%20Tei',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d627799-Reviews-Bridal_Tea_House_Hotel_Yau_Ma_Tei-Hong_Kong.html', 
     "address": "No. 5 Wing Sing Lane, Yau Ma Tei, Kowloon",
     "reservationSite": "https://bthhotel.com",
     "email": "info@bthhotel.com",
+    subway: 'Yau Ma Tei',
     "phone": 37287000,
     "col8": 27810367,
     "col9": "",
@@ -2162,6 +2258,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Dorsett Mongkok Hong Kong",
+    subway: 'Mong Kok',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Dorsett%20Mongkok%20Hong%20Kong',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d1235711-Reviews-Dorsett_Mongkok_Hong_Kong-Hong_Kong.html',
     "location": "Yau Tsim Mong",
     "address": "88 Tai Kok Tsui Road, Kowloon, Hong Kong",
     "reservationSite": "https://www.mongkok.dorsetth\notels.com/",
@@ -2244,7 +2343,10 @@ export const hotelsData: HotelRowProps[] = [
   {
 
     "name": "Ramada Hong Kong Grand",
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d3742260-Reviews-Ramada_Hong_Kong_Grand-Hong_Kong.html',
     "location": "Yau Tsim Mong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Ramada%20Hong%20Kong%20Grand',
+    subway: 'Tsim Sha Tsui',
     "address": "23 Austin Avenue, Tsim Sha Tsui, Kowloon, Hong Kon",
     "reservationSite": "www.ramadahongkonggrand.co",
     "email": "ISvn@ramadahkg.com",
@@ -2276,6 +2378,9 @@ export const hotelsData: HotelRowProps[] = [
   {
     "name": "Sheraton Hong Kong Hotel and Towers",
     "location": "Yau Tsim Mong",
+    subway: 'Tsim Sha Tsui',
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Sheraton%20Hong%20Kong%20Hotel%20and%20Towers',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d305921-Reviews-Sheraton_Hong_Kong_Hotel_Towers-Hong_Kong.html',
     "address": "20 Nathan Road, Tsim Sha Tsui",
     "reservationSite": "sheratonhongkonghotel.com",
     "email": "RES.HongKong@sheraton.com",
@@ -2327,6 +2432,9 @@ export const hotelsData: HotelRowProps[] = [
   },
   {
     "name": "Silka Seaview Hotel Hong Kong",
+    facebookReviews: 'https://www.facebook.com/groups/2788738214495345/search/?q=Silka%20Seaview%20Hotel%20Hong%20Kong',
+    subway: 'Yau Ma Tei',
+    tripAdvisorReviews: 'https://en.tripadvisor.com.hk/Hotel_Review-g294217-d305379-Reviews-Silka_Seaview_Hotel-Hong_Kong.html',
     "location": "Yau Tsim Mong",
     "address": "268 Shanghai Street, Yau Ma Tei,\nKowloon, Hong Kong",
     "reservationSite": "www.silkahotels.com/seaview",

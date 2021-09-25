@@ -4,11 +4,11 @@ export const getLocations = (hotels: HotelRowProps[]): string[] => {
   const locations: {[key: string]: boolean}= {}
   const names: string[] = [];
    hotels.forEach((hotel) => {
-     if(!locations[hotel.location]){
-       locations[hotel.location] = true; 
-      names.push(hotel.location);
+     if(!locations[hotel.subway]){
+       locations[hotel.subway] = true; 
+      names.push(hotel.subway);
      }
   })
-  return names
+  return names.sort()
   
 }

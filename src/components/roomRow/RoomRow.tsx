@@ -1,7 +1,7 @@
 import React from 'react';
-import { Theme, makeStyles, Typography, Card, CardContent, Divider } from '@material-ui/core';
+import { Theme, makeStyles, Typography, Card, Divider } from '@material-ui/core';
 import { Room } from '../hotelRow/HotelRowStacked';
-
+import clx from 'clsx';
 const useStyles = makeStyles((theme: Theme) => ({
   labelValueContainer: {
     display: 'flex'
@@ -19,17 +19,23 @@ const useStyles = makeStyles((theme: Theme) => ({
   card: {
     margin: theme.spacing(0.5),
     padding: theme.spacing(0.5)
+  },
+  matched: {
+    backgroundColor: '#33eb91',
   }
 }))
 
 interface RoomRowProps {
   room: Room;
+  minInt?: number;
+  maxInt?: number;
 }
 
-export const RoomRow: React.FC<RoomRowProps> = ({ room }) => {
+export const RoomRow: React.FC<RoomRowProps> = ({ room, maxInt, minInt }) => {
+  const matched = (maxInt !== undefined && minInt !== undefined) ? (room.price <= maxInt && room.price >= minInt) : false
   const classes = useStyles();
   return (
-    <Card className={classes.card} elevation={0} variant='outlined'>
+    <Card className={clx(classes.card, matched && classes.matched)} elevation={0} variant='outlined'>
     
       <div className={classes.pricePaxContainer}>
         <div className={classes.labelValueContainer}>

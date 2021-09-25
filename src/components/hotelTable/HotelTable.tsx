@@ -3,7 +3,6 @@ import { HotelRowProps } from '../hotelRow/HotelRowStacked';
 import { hotelsData } from '../../fixtures/hotelsNew.data';
 import clx from 'clsx';
 import {  Button, Card, CardContent, makeStyles, MenuItem, Select, TextField, Theme, Typography } from '@material-ui/core';
-import { districts } from '../../fixtures/districts.data';
 import { HotelRowsContainerMemo } from '../hotelRowsContainer/hotelRowsContainer';
 import { isMobile } from '../../platform/platform';
 import { getLocations } from '../../utils/getLocations';
@@ -49,6 +48,9 @@ interface State {
 export const HotelTable: React.FC = () => {
   const [location, setLocation] = React.useState('');
   const locations = getLocations(hotelsData);
+  const[minInt, setMinInt] = React.useState<number|undefined>(undefined);
+  const [maxInt, setMaxInt] = React.useState<number|undefined>(undefined)
+ 
   const [searchList, setSearchList] = React.useState<HotelRowProps[]>(hotelsData)
   const [values, setValues] = React.useState<State>({
     minAmount: '',
@@ -62,6 +64,8 @@ export const HotelTable: React.FC = () => {
       minAmount: '',
       maxAmount: ''
     })
+    setMinInt(undefined);
+    setMaxInt(undefined);
     setSearchList(hotelsData)
   }
 
@@ -77,8 +81,10 @@ export const HotelTable: React.FC = () => {
     };
 
   const onSearchClick = () => {
-    const minInt = parseInt(values.minAmount || '0')
+    const minInt = parseInt(values.minAmount || '0') 
     const maxInt = parseInt(values.maxAmount || '99999')
+    setMinInt(minInt);
+    setMaxInt(maxInt)
     if (!location.length) {
       const priceFiltered = hotelsData.filter((hotel) => {
         const price = hotel.rooms.filter((room) => room.price >= minInt && room.price <= maxInt)
@@ -93,7 +99,7 @@ export const HotelTable: React.FC = () => {
       const rooms = hotel.rooms.filter((room) => room.price >= minInt && room.price <= maxInt)
       return rooms.length
     })
-    const filteredData = priceFiltered.filter((hotel) => (hotel.location === location))
+    const filteredData = priceFiltered.filter((hotel) => (hotel.subway === location))
 
     setSearchList(filteredData)
   }
@@ -123,7 +129,7 @@ export const HotelTable: React.FC = () => {
                 onChange={handleChange}
               >
                 <MenuItem value="">
-                  <Typography><em>Filter by location</em></Typography>
+                  <Typography><em>Filter by MTR Station</em></Typography>
                 </MenuItem>
                 {locations.map((district) => {
                   return (
@@ -158,7 +164,7 @@ export const HotelTable: React.FC = () => {
           </CardContent>
         </Card>
       </div>
-      <HotelRowsContainerMemo rooms={searchList} />
+      <HotelRowsContainerMemo minInt={minInt} maxInt={maxInt} rooms={searchList} />
     </div>
   )
 }
